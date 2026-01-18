@@ -14,6 +14,7 @@ Available Models:
 - llama-8b:  Llama 3.1 8B (Q4) - 6GB+ VRAM (default)
 - gemma-9b:  Gemma 2 9B (Q4_K_M) - 8GB+ VRAM (alternative)
 - llama-3b:  Llama 3.2 3B (Q4_K_M) - 3GB+ VRAM (basic, low VRAM only)
+- translategemma-12b: translategemma 12B - 8GB+ VRAM (generic)
 - auto:      Auto-select based on available VRAM
 
 Usage:
@@ -82,6 +83,12 @@ MODEL_REGISTRY = {
         'vram': 8.0,
         'desc': 'Gemma 2 9B - Alternative model, requires 8GB+ VRAM'
     },
+    'translategemma-12b': {
+        'repo': 'bullerwins/translategemma-12b-it-GGUF',
+        'file': 'translategemma-12b-it-Q4_K_M.gguf',
+        'vram': 8.0,
+        'desc': 'TranslateGemma 12B - Generic model, requires 8GB+ VRAM'
+    }
 }
 
 
@@ -391,6 +398,7 @@ def ensure_model_downloaded(model_id: str) -> Path:
         'llama-3b': '~2.0 GB',
         'llama-8b': '~4.7 GB',
         'gemma-9b': '~5.5 GB',
+        'translategemma-12b':'~7.3 GB',
     }
     size_str = size_estimates.get(model_id, 'several GB')
 
