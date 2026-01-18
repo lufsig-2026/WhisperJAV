@@ -347,7 +347,7 @@ def parse_arguments():
     )
     translation_group.add_argument(
         "--translate-tone",
-        choices=["standard", "pornify"],
+        choices=["standard", "pornify", "generic"],
         default="standard",
         help="Translation style (default: standard)"
     )

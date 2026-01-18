@@ -74,6 +74,7 @@ def build_provider_options(args, settings_model_params: dict, effective_tone: st
     Defaults:
       - standard: temperature=0.5, top_p=0.9
       - pornify:  temperature=1.2, top_p=0.9
+      - generic: temperature=0.5, top_p=0.9
     """
     def _to_float(val):
         try:
@@ -206,7 +207,7 @@ def main():
     translation_group.add_argument(
         '--model',
         help="Model override. For --provider local: llama-8b (6GB VRAM, default), "
-             "gemma-9b (8GB VRAM, best), llama-3b (3GB VRAM), auto"
+             "gemma-9b (8GB VRAM, best), llama-3b (3GB VRAM), translategemma-12b (8GB VRAM), auto"
     )
     translation_group.add_argument(
         '-t', '--target',
@@ -222,7 +223,7 @@ def main():
     )
     translation_group.add_argument(
         '--tone',
-        choices=['standard', 'pornify'],
+        choices=['standard', 'pornify', 'generic'],
         default=None,
         help=f"Translation tone/style (default: {settings.get('tone', 'standard')})"
     )

@@ -326,7 +326,7 @@ class TestCLIValidation:
 
     def test_translate_tone_choices(self):
         """Test that all GUI tone choices are accepted by CLI."""
-        tones = ["standard", "pornify"]
+        tones = ["standard", "pornify", "generic"]
 
         result = run_cli(["--help"], timeout=10)
 

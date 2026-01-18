@@ -100,7 +100,7 @@ def _resolve_instruction_file(tone: str = "standard", refresh: bool = False) -> 
     Resolve instruction file path by fetching content and caching to temp file.
 
     Args:
-        tone: Translation tone ('standard' or 'pornify')
+        tone: Translation tone ('standard', 'pornify' or 'generic')
         refresh: Force refresh of cached content
 
     Returns:
@@ -218,7 +218,7 @@ def translate_with_config(
         input_path: Path to input SRT file
         provider: AI provider name ('deepseek', 'openrouter', 'gemini', 'claude', 'gpt')
         target_lang: Target language ('english', 'chinese', 'indonesian', 'spanish')
-        tone: Translation tone ('standard' or 'pornify')
+        tone: Translation tone ('standard', 'pornify' or 'generic')
         api_key: API key (or set via environment variable)
         model: Model override (uses provider default if not specified)
         source_lang: Source language ('japanese', 'korean', 'chinese')

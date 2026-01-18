@@ -141,12 +141,15 @@ def interactive_configure():
     print(f"\n5. Translation Tone/Style")
     print("   1. standard (clean, professional)")
     print("   2. pornify (explicit, adult-oriented)")
+    print("   3. generic (clean, generic)")
     current_tone = settings.get('tone', 'standard')
-    tone_choice = input(f"   Select tone [1-2] (Enter to keep {current_tone}): ").strip()
+    tone_choice = input(f"   Select tone [1-3] (Enter to keep {current_tone}): ").strip()
     if tone_choice == '1':
         settings['tone'] = 'standard'
     elif tone_choice == '2':
         settings['tone'] = 'pornify'
+    elif tone_choice == '3':
+        settings['tone'] = 'generic'
 
     # Advanced settings
     print(f"\n6. Advanced Settings (optional)")

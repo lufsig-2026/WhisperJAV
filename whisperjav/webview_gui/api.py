@@ -2621,7 +2621,7 @@ class WhisperJAVAPI:
                 - target: str - Target language
                 - model: str - Model override (optional)
                 - api_key: str - API key (optional, uses env var)
-                - tone: str - Translation tone (standard/pornify)
+                - tone: str - Translation tone (standard/pornify/generic)
                 - movie_title: str - Movie title context (optional)
                 - actress: str - Actress name context (optional)
                 - movie_plot: str - Plot summary context (optional)
